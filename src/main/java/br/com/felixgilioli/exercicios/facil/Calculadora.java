@@ -1,13 +1,18 @@
 package br.com.felixgilioli.exercicios.facil;
 
+/**
+ * Classe com métodos para calculos matemáticos.
+ */
 public class Calculadora {
+
+    private Calculadora() {}
 
     /**
      * Deve calcular a média do array de números inteiros e retorna-la.
      * @param ints array de números inteiros.
      * @return média dos inteiros.
      */
-    public double getMedia(int[] ints) {
+    public static double getMedia(int[] ints) {
         return 0;
     }
 
@@ -17,7 +22,7 @@ public class Calculadora {
      * @param b segundo número.
      * @return o maior número.
      */
-    public int getMaior(int a, int b) {
+    public static int getMaior(int a, int b) {
         return 0;
     }
 
@@ -26,7 +31,7 @@ public class Calculadora {
      * @param n número inteiro.
      * @return raíz quadrada do {@param n}.
      */
-    public double getRaizQuadrada(int n) {
+    public static double getRaizQuadrada(int n) {
         return 0;
     }
 
@@ -36,7 +41,7 @@ public class Calculadora {
      * @param n número inteiro.
      * @return valor absoluto.
      */
-    public int getAbsoluto(int n) {
+    public static int getAbsoluto(int n) {
         return 0;
     }
 
