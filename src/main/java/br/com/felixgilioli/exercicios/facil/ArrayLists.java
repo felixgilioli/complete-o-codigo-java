@@ -17,4 +17,14 @@ public class ArrayLists {
     public static List<Integer> getImpares(List<Integer> numeros) {
         return numeros;
     }
+
+    /**
+     * Deve retornar a quantidade de pessoas que começam com a letra {@param letra}
+     * @param pessoas lista contendo o nome das pessoas, ex: ["Felix", "Daiane"].
+     * @param letra letra na qual deve você retornar a quantidade dos nomes que começam com ela, ex: "F"
+     * @return quantidade de pessoas.
+     */
+    public static long getQuantidadeDePessoasQueComecamComALetra(List<String> pessoas, String letra) {
+        return 0;
+    }
 }

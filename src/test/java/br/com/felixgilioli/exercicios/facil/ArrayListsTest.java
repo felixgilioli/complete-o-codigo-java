@@ -38,4 +38,30 @@ class ArrayListsTest {
         List<Integer> impares = ArrayLists.getImpares(numeros);
         assertTrue(impares.isEmpty());
     }
+
+    @Test
+    void getQuantidadeDePessoasQueComecamComALetra_test01() {
+        List<String> pessoas = new ArrayList<>(asList("Felix", "Daiane", "Erivelto",
+                "Paulo", "Maycon", "Elizandro"));
+        long quantidade = ArrayLists.getQuantidadeDePessoasQueComecamComALetra(pessoas, "E");
+
+        assertEquals(2, quantidade);
+    }
+
+    @Test
+    void getQuantidadeDePessoasQueComecamComALetra_test02() {
+        List<String> pessoas = new ArrayList<>(asList("Felix", "Daiane", "Erivelto",
+                "Paulo", "Maycon", "Elizandro"));
+        long quantidade = ArrayLists.getQuantidadeDePessoasQueComecamComALetra(pessoas, "A");
+
+        assertEquals(0, quantidade);
+    }
+
+    @Test
+    void getQuantidadeDePessoasQueComecamComALetra_test03() {
+        List<String> pessoas = new ArrayList<>();
+        long quantidade = ArrayLists.getQuantidadeDePessoasQueComecamComALetra(pessoas, "A");
+
+        assertEquals(0, quantidade);
+    }
 }
