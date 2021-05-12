@@ -64,4 +64,12 @@ class ArrayListsTest {
 
         assertEquals(0, quantidade);
     }
+
+    @Test
+    void getQuantidadeDePessoasQueComecamComALetra_test04() {
+        List<String> pessoas = new ArrayList<>(asList("Felix"));
+        long quantidade = ArrayLists.getQuantidadeDePessoasQueComecamComALetra(pessoas, "F");
+
+        assertEquals(1, quantidade);
+    }
 }
