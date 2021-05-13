@@ -1,7 +1,9 @@
 package br.com.felixgilioli.exercicios.facil;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -41,6 +43,31 @@ class StringsTest {
     void getStringTruncada_test06() {
         String stringTruncada = Strings.getStringTruncada("Felix", -1);
         assertEquals("Felix", stringTruncada);
+    }
+
+    @Test
+    void isBlank_test01() {
+        assertTrue(Strings.isBlank(null));
+    }
+
+    @Test
+    void isBlank_test02() {
+        assertTrue(Strings.isBlank(""));
+    }
+
+    @Test
+    void isBlank_test03() {
+        assertTrue(Strings.isBlank("       "));
+    }
+
+    @Test
+    void isBlank_test04() {
+        assertTrue(Strings.isBlank(" "));
+    }
+
+    @Test
+    void isBlank_test05() {
+        assertFalse(Strings.isBlank("Felix"));
     }
 
 }
