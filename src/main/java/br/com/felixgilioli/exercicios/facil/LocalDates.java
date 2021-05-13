@@ -1,6 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 /**
  * Classe com métodos para trabalhar com objetos do tipo {@link java.time.LocalDate}.
@@ -16,6 +17,6 @@ public class LocalDates {
      * @return quantidade de dias entre as datas.
      */
     public static long getQuantidadeDeDiasEntreDatas(LocalDate inicio, LocalDate fim) {
-        return 0;
+        return Math.abs(ChronoUnit.DAYS.between(inicio, fim));
     }
 }

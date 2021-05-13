@@ -13,7 +13,11 @@ public class Calculadora {
      * @return média dos inteiros.
      */
     public static double getMedia(int[] ints) {
-        return 0;
+        int total = 0;
+        for (int n : ints) {
+            total += n;
+        }
+        return total / (double) ints.length;
     }
 
     /**
@@ -23,7 +27,7 @@ public class Calculadora {
      * @return o maior número.
      */
     public static int getMaior(int a, int b) {
-        return 0;
+        return Math.max(a, b);
     }
 
     /**
@@ -32,7 +36,7 @@ public class Calculadora {
      * @return raíz quadrada do {@param n}.
      */
     public static double getRaizQuadrada(int n) {
-        return 0;
+        return Math.sqrt(n);
     }
 
     /**
@@ -42,7 +46,7 @@ public class Calculadora {
      * @return valor absoluto.
      */
     public static int getAbsoluto(int n) {
-        return 0;
+        return Math.abs(n);
     }
 
 }

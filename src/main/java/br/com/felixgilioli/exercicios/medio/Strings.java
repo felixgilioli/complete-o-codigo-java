@@ -1,5 +1,7 @@
 package br.com.felixgilioli.exercicios.medio;
 
+import java.util.stream.Stream;
+
 /**
  * Classe com métodos para trabalhar com Strings.
  */
@@ -13,7 +15,14 @@ public class Strings {
      * @return inteiro informando a quantidade de letras maiúsculas.
      */
     public static int getQuantidadeLetrasMaiusculas(String str) {
-        return 0;
+        if (str == null || str.isBlank()) {
+            return 0;
+        }
+
+        return (int) Stream.of(str.split(""))
+                .map(letraStr -> letraStr.charAt(0))
+                .filter(Character::isUpperCase)
+                .count();
     }
 
     /**
@@ -22,7 +31,14 @@ public class Strings {
      * @return inteiro informando a quantidade de letras minúsculas.
      */
     public static int getQuantidadeLetrasMinusculas(String str) {
-        return 0;
+        if (str == null || str.isBlank()) {
+            return 0;
+        }
+
+        return (int) Stream.of(str.split(""))
+                .map(letraStr -> letraStr.charAt(0))
+                .filter(Character::isLowerCase)
+                .count();
     }
 
     /**
@@ -31,7 +47,13 @@ public class Strings {
      * @return inteiro informando a quantidade de caracteres especiais.
      */
     public static int getQuantidadeCaracteresEspeciais(String str) {
-        return 0;
+        if (str == null || str.isBlank()) {
+            return 0;
+        }
+
+        return (int) Stream.of(str.replaceAll("\\s+", "").split("\\s*"))
+                .filter(letra -> letra.matches("[^a-zA-Z0-9_]"))
+                .count();
     }
 
 }

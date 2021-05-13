@@ -1,6 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Classe com métodos para trabalhar com listas do tipo {@link java.util.ArrayList}.
@@ -15,7 +16,9 @@ public class ArrayLists {
      * @return lista de inteiros apenas com números impares.
      */
     public static List<Integer> getImpares(List<Integer> numeros) {
-        return numeros;
+        return numeros.stream()
+                .filter(n -> n % 2 == 1)
+                .collect(Collectors.toList());
     }
 
     /**
@@ -25,6 +28,8 @@ public class ArrayLists {
      * @return quantidade de pessoas.
      */
     public static long getQuantidadeDePessoasQueComecamComALetra(List<String> pessoas, String letra) {
-        return 0;
+        return pessoas.stream()
+                .filter(pessoa -> pessoa.startsWith(letra))
+                .count();
     }
 }
