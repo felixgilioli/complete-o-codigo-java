@@ -30,7 +30,7 @@ class StringsTest {
     @Test
     void getStringTruncada_test04() {
         String stringTruncada = Strings.getStringTruncada("Felix", 0);
-        assertEquals("", stringTruncada);
+        assertEquals("...", stringTruncada);
     }
 
     @Test
