@@ -8,4 +8,11 @@ public class Usuario {
     private String sobrenome;
     private LocalDate dataNascimento;
 
+    public Usuario() {
+    }
+    public Usuario(String nome, String sobrenome, LocalDate dataNascimento) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.dataNascimento = dataNascimento;
+    }
 }
