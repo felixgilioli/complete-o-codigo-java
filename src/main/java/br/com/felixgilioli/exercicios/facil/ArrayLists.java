@@ -1,5 +1,6 @@
 package br.com.felixgilioli.exercicios.facil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,5 +27,31 @@ public class ArrayLists {
      */
     public static long getQuantidadeDePessoasQueComecamComALetra(List<String> pessoas, String letra) {
         return 0;
+    }
+
+    /**
+     * Deve fazer a leitura de um valor inteiro.{@param valorEntrada}
+     * Em seguida, calcule o menor número de notas possíveis(cédulas) onde o valor pode ser decomposto.
+     * As notas que você deve considerar são de 100,50,20,10,5,2,1.
+     * Na sequencia insira na ordem respetiva a demonstrada acima numa Lista de retorno a quantidade de cada cédula encontrada no calculo.
+     *
+     * @param valorEntrada Você receberá um valor inteiro N (0 < N < 1000000).
+     * @return lista com a quantidade de cédulas encontradas para cada valor.
+     */
+    public static List<Integer> getMenorQuantidadeDeCedulasPossivelParaInteiro(int valorEntrada) {
+        List<Integer> quantidadeDeCedulas = new ArrayList<>();
+
+        // Montagem da Lista
+        /*
+        quantidadeDeCedulas.add(cedulas100);
+        quantidadeDeCedulas.add(cedulas50);
+        quantidadeDeCedulas.add(cedulas20);
+        quantidadeDeCedulas.add(cedulas10);
+        quantidadeDeCedulas.add(cedulas5);
+        quantidadeDeCedulas.add(cedulas2);
+        quantidadeDeCedulas.add(cedulas1);
+        */
+
+        return quantidadeDeCedulas;
     }
 }
