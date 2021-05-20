@@ -104,4 +104,12 @@ class ArrayListsTest {
 
         assertEquals(asList(5, 0, 0, 0, 0, 1, 1), cedulas);
     }
+
+    @Test
+    void getMenorQuantidadeDeCedulasPossivelParaInteiro_test05() {
+        int valorEntrada = 1;
+        List<Integer> cedulas = ArrayLists.getMenorQuantidadeDeCedulasPossivelParaInteiro(valorEntrada);
+
+        assertEquals(asList(0, 0, 0, 0, 0, 0, 1), cedulas);
+    }
 }
