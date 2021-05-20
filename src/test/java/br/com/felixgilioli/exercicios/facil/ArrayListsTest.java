@@ -72,4 +72,36 @@ class ArrayListsTest {
 
         assertEquals(1, quantidade);
     }
+
+    @Test
+    void getMenorQuantidadeDeCedulasPossivelParaInteiro_test01() {
+        int valorEntrada = 89;
+        List<Integer> cedulas = ArrayLists.getMenorQuantidadeDeCedulasPossivelParaInteiro(valorEntrada);
+
+        assertEquals(asList(0, 1, 1, 1, 1, 2, 0), cedulas);
+    }
+
+    @Test
+    void getMenorQuantidadeDeCedulasPossivelParaInteiro_test02() {
+        int valorEntrada = 1850;
+        List<Integer> cedulas = ArrayLists.getMenorQuantidadeDeCedulasPossivelParaInteiro(valorEntrada);
+
+        assertEquals(asList(18, 1, 0, 0, 0, 0, 0), cedulas);
+    }
+
+    @Test
+    void getMenorQuantidadeDeCedulasPossivelParaInteiro_test03() {
+        int valorEntrada = 11257;
+        List<Integer> cedulas = ArrayLists.getMenorQuantidadeDeCedulasPossivelParaInteiro(valorEntrada);
+
+        assertEquals(asList(112, 1, 0, 0, 1, 1, 0), cedulas);
+    }
+
+    @Test
+    void getMenorQuantidadeDeCedulasPossivelParaInteiro_test04() {
+        int valorEntrada = 503;
+        List<Integer> cedulas = ArrayLists.getMenorQuantidadeDeCedulasPossivelParaInteiro(valorEntrada);
+
+        assertEquals(asList(5, 0, 0, 0, 0, 1, 1), cedulas);
+    }
 }
