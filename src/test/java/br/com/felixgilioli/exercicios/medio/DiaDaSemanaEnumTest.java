@@ -4,24 +4,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class DiaDaSemanaEnumTest {
 
-    @Test
-    void getEnumPelaDescricao_test01() {
-        final DiaDaSemanaEnum diaDaSemana = DiaDaSemanaEnum.getEnumPelaDescricao(null);
-        assertNull(diaDaSemana);
-    }
-
-    @Test
-    void getEnumPelaDescricao_test02() {
-        final DiaDaSemanaEnum diaDaSemana = DiaDaSemanaEnum.getEnumPelaDescricao("");
-        assertNull(diaDaSemana);
-    }
-
-    @Test
-    void getEnumPelaDescricao_test03() {
-        final DiaDaSemanaEnum diaDaSemana = DiaDaSemanaEnum.getEnumPelaDescricao("   ");
+    @ParameterizedTest
+    @NullSource
+    @ValueSource(strings = {"", " ", "   "})
+    void getEnumPelaDescricao_test01(String input) {
+        final DiaDaSemanaEnum diaDaSemana = DiaDaSemanaEnum.getEnumPelaDescricao(input);
         assertNull(diaDaSemana);
     }
 

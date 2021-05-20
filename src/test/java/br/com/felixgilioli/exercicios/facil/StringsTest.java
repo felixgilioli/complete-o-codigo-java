@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.NullSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 class StringsTest {
 
@@ -45,29 +48,21 @@ class StringsTest {
         assertEquals("Felix", stringTruncada);
     }
 
-    @Test
-    void isBlank_test01() {
-        assertTrue(Strings.isBlank(null));
+    @ParameterizedTest
+    @NullSource
+    @ValueSource(strings = {"", " ", "       "})
+    void isBlank_test01(String input) {
+        assertTrue(Strings.isBlank(input));
     }
 
     @Test
     void isBlank_test02() {
-        assertTrue(Strings.isBlank(""));
+        assertFalse(Strings.isBlank("Felix"));
     }
 
     @Test
     void isBlank_test03() {
-        assertTrue(Strings.isBlank("       "));
-    }
-
-    @Test
-    void isBlank_test04() {
-        assertTrue(Strings.isBlank(" "));
-    }
-
-    @Test
-    void isBlank_test05() {
-        assertFalse(Strings.isBlank("Felix"));
+        assertFalse(Strings.isBlank("Felix Gilioli"));
     }
 
 }
