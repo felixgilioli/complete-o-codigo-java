@@ -15,4 +15,22 @@ Para estar sempre atualizado quanto a novos exercícios e melhorias no projeto, 
 
 ## Como contribuir
 
-Para quem deseja contribuir com o projeto, seja com novos exercícios, correções ou documentação, sinta-se a vontade para abrir um Pull Request com suas alterações! :blush: 
+Para quem deseja contribuir com o projeto, seja com novos exercícios, correções ou documentação, sinta-se a vontade para abrir um Pull Request com suas alterações! :blush:
+
+## Desafios
+
+Estes aqui são os temas dos desafios disponíveis para serem implementados. Se quiser, em seu fork, marque cada um deles como concluído conforme as suas soluções são desenvolvidas. :muscle:
+
+- Fácil
+  - [ ] ArrayLists
+  - [ ] BigDecimals
+  - [ ] Booleanos
+  - [ ] Calculadora
+  - [ ] LocalDates
+  - [ ] Strings
+- Médio 
+  - [ ] DiaDaSemanaEnum
+  - [ ] JSONs
+  - [ ] Strings
+- Difícil
+  - [ ] JavaReflection

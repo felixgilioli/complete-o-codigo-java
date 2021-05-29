@@ -18,4 +18,40 @@ public class LocalDates {
     public static long getQuantidadeDeDiasEntreDatas(LocalDate inicio, LocalDate fim) {
         return 0;
     }
+
+    /**
+     * Deve retornar uma data no futuro com base na data inicial {@param inicio} acrescida de
+     * uma determinada quantidade de anos {@param anos}
+     * @param inicio
+     * @param anos
+     * @return
+     */
+    public static LocalDate getDataAnosAFrente(LocalDate inicio, long anos) {
+        return null;
+    }
+
+    /**
+     * Deve retornar uma data no passado com base na data inicial {@param inicio} decrescida
+     * de uma determinada quantidade de meses {@param meses}
+     * @param inicio
+     * @param meses
+     * @return
+     */
+    public static LocalDate getDataMesesAtras(LocalDate inicio, long meses) { return null; }
+
+    /**
+     * Deve retornar a data fornecida {@param data} formatada em uma string de acordo com o
+     * padrão brasileiro e separada por barras, como em 02/12/2020
+     * @param data
+     * @return
+     */
+    public static String getDataFormatadaComBarrasNoPadraoBrasileiro(LocalDate data) { return null; }
+
+    /**
+     * Deve retornar a data fornecida {@param data} formatada em uma string de acordo com o
+     * padrão norte-americano e separada por hífens, como em 2020-12-02
+     * @param data
+     * @return
+     */
+    public static String getDataFormatadaComHifensNoPadraoNorteAmericano(LocalDate data) { return null; }
 }

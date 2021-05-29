@@ -112,4 +112,20 @@ class ArrayListsTest {
 
         assertEquals(asList(0, 0, 0, 0, 0, 0, 1), cedulas);
     }
+
+    @Test
+    void getPessoasOrdenadasAlfabeticamenteCrescente_test01() {
+        List<String> pessoas = new ArrayList<>(asList("Felix", "Daiane", "Erivelto",
+                "Paulo", "Maycon", "Elizandro"));
+        List<String> pessoasOrdenadas = ArrayLists.getPessoasOrdenadasAlfabeticamenteCrescente(new ArrayList(pessoas));
+        assertEquals(asList("Daiane", "Elizandro", "Erivelto", "Felix", "Maycon", "Paulo"), pessoasOrdenadas);
+    }
+
+    @Test
+    void getPessoasOrdenadasAlfabeticamenteDecrescente_test01() {
+        List<String> pessoas = new ArrayList<>(asList("Felix", "Daiane", "Erivelto",
+                "Paulo", "Maycon", "Elizandro"));
+        List<String> pessoasOrdenadas = ArrayLists.getPessoasOrdenadasAlfabeticamenteDecrescente(new ArrayList(pessoas));
+        assertEquals(asList("Paulo", "Maycon", "Felix", "Erivelto", "Elizandro", "Daiane"), pessoasOrdenadas);
+    }
 }
