@@ -1,6 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -80,7 +81,11 @@ public class ArrayLists {
      * @param pessoas
      * @return
      */
-    public static List<String> getPessoasOrdenadasAlfabeticamenteCrescente(List<String> pessoas) { return null; }
+    public static List<String> getPessoasOrdenadasAlfabeticamenteCrescente(List<String> pessoas) {
+        return pessoas.stream()
+                .sorted()
+                .collect(Collectors.toList());
+    }
 
     /**
      * Deve retornar a mesma lista de nomes recebida {@param pessoas}, mas ordenada
@@ -88,7 +93,10 @@ public class ArrayLists {
      * @param pessoas
      * @return
      */
-    public static List<String> getPessoasOrdenadasAlfabeticamenteDecrescente(List<String> pessoas) { return null; }
+    public static List<String> getPessoasOrdenadasAlfabeticamenteDecrescente(List<String> pessoas) {
+        pessoas.sort(Collections.reverseOrder());
+        return pessoas;
+    }
 
 
 }

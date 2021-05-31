@@ -1,6 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -28,7 +29,7 @@ public class LocalDates {
      * @return
      */
     public static LocalDate getDataAnosAFrente(LocalDate inicio, long anos) {
-        return null;
+        return inicio.plusYears(anos);
     }
 
     /**
@@ -38,7 +39,9 @@ public class LocalDates {
      * @param meses
      * @return
      */
-    public static LocalDate getDataMesesAtras(LocalDate inicio, long meses) { return null; }
+    public static LocalDate getDataMesesAtras(LocalDate inicio, long meses) {
+        return inicio.minusMonths(meses);
+    }
 
     /**
      * Deve retornar a data fornecida {@param data} formatada em uma string de acordo com o
@@ -46,7 +49,9 @@ public class LocalDates {
      * @param data
      * @return
      */
-    public static String getDataFormatadaComBarrasNoPadraoBrasileiro(LocalDate data) { return null; }
+    public static String getDataFormatadaComBarrasNoPadraoBrasileiro(LocalDate data) {
+        return data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 
     /**
      * Deve retornar a data fornecida {@param data} formatada em uma string de acordo com o
@@ -54,5 +59,7 @@ public class LocalDates {
      * @param data
      * @return
      */
-    public static String getDataFormatadaComHifensNoPadraoNorteAmericano(LocalDate data) { return null; }
+    public static String getDataFormatadaComHifensNoPadraoNorteAmericano(LocalDate data) {
+        return data.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+    }
 }
