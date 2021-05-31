@@ -47,4 +47,35 @@ class LocalDatesTest {
         long quantidadeDeDiasEntreDatas = LocalDates.getQuantidadeDeDiasEntreDatas(inicio, fim);
         assertEquals(0, quantidadeDeDiasEntreDatas);
     }
+
+    @Test
+    void getDataAnosAFrente_test01() {
+        LocalDate inicio = LocalDate.of(2021, 5, 29);
+        LocalDate dataEsperada = LocalDate.of(2023, 5, 29);
+        LocalDate dataObtida = LocalDates.getDataAnosAFrente(inicio, 2);
+        assertEquals(dataEsperada, dataObtida);
+    }
+
+    @Test
+    void getDataMesesAtras_test01() {
+        LocalDate inicio = LocalDate.of(2021, 5, 13);
+        LocalDate dataEsperada = LocalDate.of(2020, 12, 13);
+        LocalDate dataObtida = LocalDates.getDataMesesAtras(inicio, 5);
+        assertEquals(dataEsperada, dataObtida);
+    }
+
+    @Test
+    void getDataFormatadaComBarrasNoPadraoBrasileiro_test01() {
+        LocalDate data = LocalDate.of(2021, 6, 7);
+        String dataFormatada = LocalDates.getDataFormatadaComBarrasNoPadraoBrasileiro(data);
+        assertEquals("07/06/2021", dataFormatada);
+    }
+
+    @Test
+    void getDataFormatadaComHifensNoPadraoNorteAmericano_test01() {
+        LocalDate data = LocalDate.of(2020, 10, 1);
+        String dataFormatada = LocalDates.getDataFormatadaComHifensNoPadraoNorteAmericano(data);
+        assertEquals("2020-10-01", dataFormatada);
+    }
+
 }

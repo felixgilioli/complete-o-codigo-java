@@ -39,7 +39,7 @@ public class ArrayLists {
      * Em seguida, calcule o menor número de notas possíveis(cédulas) onde o valor pode ser decomposto.
      * As notas que você deve considerar são de 100,50,20,10,5,2,1.
      * Na sequencia insira na ordem respetiva a demonstrada acima numa Lista de retorno a quantidade de cada cédula encontrada no calculo.
-     * 
+     *
      * @param valorEntrada Você receberá um valor inteiro N (0 < N < 1000000).
      * @return lista com a quantidade de cédulas encontradas para cada valor.
      */
@@ -73,5 +73,22 @@ public class ArrayLists {
 
         return quantidadeDeCedulas;
     }
+
+    /**
+     * Deve retornar a mesma lista de nomes recebida {@param pessoas}, mas ordenada
+     * alfabéticamente em ordem crescente
+     * @param pessoas
+     * @return
+     */
+    public static List<String> getPessoasOrdenadasAlfabeticamenteCrescente(List<String> pessoas) { return null; }
+
+    /**
+     * Deve retornar a mesma lista de nomes recebida {@param pessoas}, mas ordenada
+     * alfabéticamente em ordem decrescente
+     * @param pessoas
+     * @return
+     */
+    public static List<String> getPessoasOrdenadasAlfabeticamenteDecrescente(List<String> pessoas) { return null; }
+
 
 }
