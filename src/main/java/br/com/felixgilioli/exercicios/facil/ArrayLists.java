@@ -54,4 +54,22 @@ public class ArrayLists {
 
         return quantidadeDeCedulas;
     }
+
+    /**
+     * Deve retornar a mesma lista de nomes recebida {@param pessoas}, mas ordenada
+     * alfabéticamente em ordem crescente
+     * @param pessoas
+     * @return
+     */
+    public static List<String> getPessoasOrdenadasAlfabeticamenteCrescente(List<String> pessoas) { return null; }
+
+    /**
+     * Deve retornar a mesma lista de nomes recebida {@param pessoas}, mas ordenada
+     * alfabéticamente em ordem decrescente
+     * @param pessoas
+     * @return
+     */
+    public static List<String> getPessoasOrdenadasAlfabeticamenteDecrescente(List<String> pessoas) { return null; }
+
+
 }
